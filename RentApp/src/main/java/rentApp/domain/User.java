@@ -35,15 +35,20 @@ public class User implements UserDetails {
 	@NotEmpty
 	private String phonenumber;
 
+	private String address;
+
+	private String school;
+
 	public User() {
 		super();
 	}
 
-	public User(String username, String password, String email, String phonenumber) {
+	public User(String username, String password, String email, String phonenumber, String address, String school) {
 		this.username = username;
 		this.password = password;
 		this.email = email;
 		this.phonenumber = phonenumber;
+		this.address = address;
 	}
 
 	public Long getId() {
@@ -84,6 +89,22 @@ public class User implements UserDetails {
 
 	public void setgetPhonenumber(String phonenumber) {
 		this.phonenumber = phonenumber;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getSchool() {
+		return school;
+	}
+
+	public void setSchool(String school) {
+		this.school = school;
 	}
 
 	@Override

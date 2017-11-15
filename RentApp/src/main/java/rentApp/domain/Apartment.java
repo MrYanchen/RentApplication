@@ -25,6 +25,12 @@ public class Apartment {
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "apartment", cascade = CascadeType.ALL)
 	private Set<Picture> picture;
 
+	@NotEmpty
+	private int price;
+
+	@NotEmpty
+	private String summary;
+
 	private String description;
 
 	public Long getId() {
@@ -57,6 +63,22 @@ public class Apartment {
 
 	public void setPicture(Set<Picture> picture) {
 		this.picture = picture;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
 	}
 
 }
